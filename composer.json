@@ -1,5 +1,5 @@
 {
-    "name": "the-3labs-team/nova-busy-resource-field",
+    "name": "ZakariaTlilani/nova-busy-resource-field",
     "description": "A Laravel Nova field.",
     "keywords": [
         "laravel",
@@ -11,13 +11,13 @@
     },
     "autoload": {
         "psr-4": {
-            "The3labsTeam\\NovaBusyResourceField\\": "src/"
+            "zakariatlilani\\NovaBusyResourceField\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "The3labsTeam\\NovaBusyResourceField\\FieldServiceProvider"
+                "zakariatlilani\\NovaBusyResourceField\\FieldServiceProvider"
             ]
         }
     },
