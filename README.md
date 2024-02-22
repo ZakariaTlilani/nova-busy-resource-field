@@ -57,10 +57,10 @@ php artisan vendor:publish --tag=nova-busy-resource-field-config
 
 First you need to make a model "busiable".
 For example, if you want to make the Article model busiable, you need to add the
-trait `The3labsTeam\NovaBusyResourceField\App\Traits\Busiable` to it:
+trait `zakariatlilani\NovaBusyResourceField\App\Traits\Busiable` to it:
 
 ```php
-use The3labsTeam\NovaBusyResourceField\App\Traits\Busiable;
+use zakariatlilani\NovaBusyResourceField\App\Traits\Busiable;
 
 class Article extends Model{
     use Busiable;
@@ -70,7 +70,7 @@ class Article extends Model{
 Then, in your Nova resource, you can add the field:
 
 ```php
-    use The3labsTeam\NovaBusyResourceField\NovaBusyResourceField;
+    use zakariatlilani\NovaBusyResourceField\NovaBusyResourceField;
 
 
     public function fields(NovaRequest $request)

@@ -1,6 +1,6 @@
 <?php
 
-namespace The3labsTeam\NovaBusyResourceField;
+namespace zakariatlilani\NovaBusyResourceField;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
@@ -22,26 +22,26 @@ class FieldServiceProvider extends ServiceProvider
 
         // Traits
         $this->publishes([
-            __DIR__.'/App/Traits' => app_path('Traits'),
+            __DIR__ . '/App/Traits' => app_path('Traits'),
         ], 'nova-busy-resource-field-traits');
 
         // Migration
         $this->publishes([
-            __DIR__.'/../database/migrations/2024_01_16_104203_create_busiable_table.php' => database_path('migrations/2024_01_16_104203_create_busiable_table.php'),
+            __DIR__ . '/../database/migrations/2024_01_16_104203_create_busiable_table.php' => database_path('migrations/2024_01_16_104203_create_busiable_table.php'),
         ], 'nova-busy-resource-field-migrations');
 
         // Config
         $this->publishes([
-            __DIR__.'/../config/nova-busy-resource-field.php' => config_path('nova-busy-resource-field.php'),
+            __DIR__ . '/../config/nova-busy-resource-field.php' => config_path('nova-busy-resource-field.php'),
         ], 'nova-busy-resource-field-config');
 
         $this->commands([
-            \The3labsTeam\NovaBusyResourceField\App\Console\Commands\BusyCommand::class,
+            \zakariatlilani\NovaBusyResourceField\App\Console\Commands\BusyCommand::class,
         ]);
 
         Nova::serving(function (ServingNova $event) {
-            Nova::script('nova-busy-resource-field', __DIR__.'/../dist/js/field.js');
-            Nova::style('nova-busy-resource-field', __DIR__.'/../dist/css/field.css');
+            Nova::script('nova-busy-resource-field', __DIR__ . '/../dist/js/field.js');
+            Nova::style('nova-busy-resource-field', __DIR__ . '/../dist/css/field.css');
         });
     }
 
@@ -53,7 +53,7 @@ class FieldServiceProvider extends ServiceProvider
 
         Route::middleware(['nova:api'])
             ->prefix('nova-vendor/the-3labs-team/nova-busy-resource-field')
-            ->group(__DIR__.'/../routes/api.php');
+            ->group(__DIR__ . '/../routes/api.php');
     }
 
     /**

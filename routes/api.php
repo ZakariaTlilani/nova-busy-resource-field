@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use The3labsTeam\NovaBusyResourceField\App\Http\Controllers\BusyController;
+use zakariatlilani\NovaBusyResourceField\App\Http\Controllers\BusyController;
 
 /*
 |--------------------------------------------------------------------------

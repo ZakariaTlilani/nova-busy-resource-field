@@ -1,6 +1,6 @@
 <?php
 
-namespace The3labsTeam\NovaBusyResourceField\App\Http\Controllers;
+namespace zakariatlilani\NovaBusyResourceField\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
@@ -13,7 +13,7 @@ class BusyController extends Controller
     public function storeBusy(Request $request)
     {
         // If is a new resource, return false
-        if (! $request['model-id'] || ! $request['model-name']) {
+        if (!$request['model-id'] || !$request['model-name']) {
             return;
         }
         $resource = $this->getResource($request['model-id'], $request['model-name']);
@@ -24,7 +24,7 @@ class BusyController extends Controller
     protected function getResource(string $id, string $name)
     {
         $modelId = $id;
-        $modelName = '\App\Models\\'.Str::studly(Str::singular($name));
+        $modelName = '\App\Models\\' . Str::studly(Str::singular($name));
 
         return $modelName::find($modelId);
     }
@@ -32,7 +32,7 @@ class BusyController extends Controller
     public function isBusy(Request $request)
     {
         // If is a new resource, return false
-        if (! $request['model-id'] || ! $request['model-name']) {
+        if (!$request['model-id'] || !$request['model-name']) {
             return response()->json([
                 'success' => false,
                 'data' => null,

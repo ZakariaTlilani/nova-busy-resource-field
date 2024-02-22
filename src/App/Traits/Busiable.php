@@ -1,6 +1,6 @@
 <?php
 
-namespace The3labsTeam\NovaBusyResourceField\App\Traits;
+namespace zakariatlilani\NovaBusyResourceField\App\Traits;
 
 use App\Models\Admin;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
