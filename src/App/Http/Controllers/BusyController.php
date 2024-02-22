@@ -17,8 +17,8 @@ class BusyController extends Controller
             return;
         }
         $resource = $this->getResource($request['model-id'], $request['model-name']);
-        $user = \App\Models\User::find($request['user-id']);
-        $resource->busyFrom($user);
+        $admin = \App\Models\Admin::find($request['user-id']);
+        $resource->busyFrom($admin);
     }
 
     protected function getResource(string $id, string $name)
