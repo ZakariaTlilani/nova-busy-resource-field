@@ -11,13 +11,13 @@
     },
     "autoload": {
         "psr-4": {
-            "zakariatlilani\\NovaBusyResourceField\\": "src/"
+            "Zakariatlilani\\NovaBusyResourceField\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "zakariatlilani\\NovaBusyResourceField\\FieldServiceProvider"
+                "Zakariatlilani\\NovaBusyResourceField\\FieldServiceProvider"
             ]
         }
     },

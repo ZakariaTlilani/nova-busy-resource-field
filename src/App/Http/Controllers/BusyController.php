@@ -1,6 +1,6 @@
 <?php
 
-namespace zakariatlilani\NovaBusyResourceField\App\Http\Controllers;
+namespace Zakariatlilani\NovaBusyResourceField\App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;

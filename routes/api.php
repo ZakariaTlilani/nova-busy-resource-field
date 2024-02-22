@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use zakariatlilani\NovaBusyResourceField\App\Http\Controllers\BusyController;
+use Zakariatlilani\NovaBusyResourceField\App\Http\Controllers\BusyController;
 
 /*
 |--------------------------------------------------------------------------

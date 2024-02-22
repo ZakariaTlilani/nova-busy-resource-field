@@ -1,6 +1,6 @@
 <?php
 
-namespace zakariatlilani\NovaBusyResourceField;
+namespace Zakariatlilani\NovaBusyResourceField;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
@@ -36,7 +36,7 @@ class FieldServiceProvider extends ServiceProvider
         ], 'nova-busy-resource-field-config');
 
         $this->commands([
-            \zakariatlilani\NovaBusyResourceField\App\Console\Commands\BusyCommand::class,
+            \Zakariatlilani\NovaBusyResourceField\App\Console\Commands\BusyCommand::class,
         ]);
 
         Nova::serving(function (ServingNova $event) {

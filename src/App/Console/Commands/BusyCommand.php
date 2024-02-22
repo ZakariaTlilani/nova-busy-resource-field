@@ -1,6 +1,6 @@
 <?php
 
-namespace zakariatlilani\NovaBusyResourceField\App\Console\Commands;
+namespace Zakariatlilani\NovaBusyResourceField\App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;

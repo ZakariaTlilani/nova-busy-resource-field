@@ -1,6 +1,6 @@
 <?php
 
-namespace zakariatlilani\NovaBusyResourceField;
+namespace Zakariatlilani\NovaBusyResourceField;
 
 use Laravel\Nova\Fields\Field;
 
