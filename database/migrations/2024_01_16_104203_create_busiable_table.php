@@ -17,8 +17,8 @@ return new class extends Migration
             $table->unsignedBigInteger('busiable_id');
             $table->string('busiable_type');
 
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('admin_id');
+            $table->foreign('admin_id')->references('id')->on('admins');
 
             $table->timestamps();
         });

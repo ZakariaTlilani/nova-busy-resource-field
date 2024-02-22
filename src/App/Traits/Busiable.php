@@ -2,7 +2,7 @@
 
 namespace The3labsTeam\NovaBusyResourceField\App\Traits;
 
-use App\Models\User;
+use App\Models\Admin;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 
 trait Busiable
@@ -12,9 +12,9 @@ trait Busiable
     /**
      * Return the user who is busy with this resource
      */
-    public function busyFrom(User $user)
+    public function busyFrom(Admin $admin)
     {
-        $this->busier()->syncWithoutDetaching([$user->id => ['created_at' => now(), 'updated_at' => now()]]);
+        $this->busier()->syncWithoutDetaching([$admin->id => ['created_at' => now(), 'updated_at' => now()]]);
     }
 
     public function unbusy()
@@ -34,7 +34,7 @@ trait Busiable
 
     public function isNotBusy(): bool
     {
-        return ! $this->isBusy();
+        return !$this->isBusy();
     }
 
     public function scopeWhereBusy($query)
@@ -50,6 +50,6 @@ trait Busiable
     //=== RELATIONSHIPS ===//
     public function busier(): MorphToMany
     {
-        return $this->morphToMany(User::class, 'busiable')->withPivot('created_at', 'updated_at');
+        return $this->morphToMany(Admin::class, 'busiable')->withPivot('created_at', 'updated_at');
     }
 }
